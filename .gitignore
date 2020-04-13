@@ -1,0 +1,8 @@
+# ffmpeg bin
+ffmpeg
+# vscode ionide
+.fake
+.ionide
+# csharp build
+bin
+obj

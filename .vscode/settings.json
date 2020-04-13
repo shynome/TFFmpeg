@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 4,
+  "files.exclude": {
+    "bin": true,
+    "obj": true,
+    ".ionide": true,
+  }
+}
