@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <PublishSingleFile>false</PublishSingleFile>
     <PublishTrimmed>false</PublishTrimmed>
   </PropertyGroup>
@@ -15,17 +17,19 @@
     <Compile Include="Main.fs" />
     <Compile Include="Program.fs" />
     <AvaloniaResource Include="**\*.xaml" />
+    <Content Condition="'$(RuntimeIdentifier)'!=''" CopyToOutputDirectory="PreserveNewest" Include="ffmpeg-bin/$(RuntimeIdentifier)/ffmpeg" />
   </ItemGroup>
 
   <ItemGroup />
 
   <ItemGroup>
-    <PackageReference Include="Avalonia.Desktop" Version="0.9.7" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.2" />
     <PackageReference Include="FSharp.Control.Reactive" Version="4.2.0" />
-    <PackageReference Include="JaggerJo.Avalonia.FuncUI" Version="0.4.0" />
-    <PackageReference Include="JaggerJo.Avalonia.FuncUI.DSL" Version="0.4.0" />
-    <PackageReference Include="JaggerJo.Avalonia.FuncUI.Elmish" Version="0.4.0" />
+    <PackageReference Include="JaggerJo.Avalonia.FuncUI" Version="0.2.0" />
+    <PackageReference Include="JaggerJo.Avalonia.FuncUI.DSL" Version="0.2.0" />
+    <PackageReference Include="JaggerJo.Avalonia.FuncUI.Elmish" Version="0.2.0" />
     <PackageReference Include="xFFmpeg.NET" Version="3.4.0" />
+    <PackageReference Include="Dotnet.Bundle" Version="*" />
   </ItemGroup>
 
   <ItemGroup>

@@ -201,7 +201,7 @@ module Main =
                         ]
                         let (w,h) = state.Size
                         TextBlock.create [
-                            TextBlock.text "定宽"
+                            TextBlock.text "w"
                         ]
                         TextBox.create [
                             TextBox.text (string w)
@@ -218,7 +218,7 @@ module Main =
                             TextBlock.width 8.0
                         ]
                         TextBlock.create [
-                            TextBlock.text "定高"
+                            TextBlock.text "h"
                         ]
                         TextBox.create [
                             TextBox.text (string h)
