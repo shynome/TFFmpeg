@@ -23,9 +23,12 @@
 
 依赖:
 - `dotnet core` `3.1` 及以上的版本
+- 需要下载好对应平台的 `ffmpeg` 可执行文件放到 `ffmpeg-bin/win-x64/ffmpeg` 位置
 
 ```sh
 git clone https://github.com/shynome/TFFmpeg.git
 cd TFFmpeg
 dotnet run
+# 打包可执行文件
+dotnet publish -r win-x64 -c Release
 ```
